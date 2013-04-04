@@ -11,6 +11,7 @@
 		75082ACC14A13CBC000087BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75082ACB14A13CBC000087BF /* Foundation.framework */; };
 		75082ACE14A13CBC000087BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75082ACD14A13CBC000087BF /* CoreGraphics.framework */; };
 		75460CB514A38BEB00B02606 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75460CB314A38BE200B02606 /* Security.framework */; };
+		A71BD2C8170DE44B00F25892 /* libBTEncryption.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A71BD2C7170DE44B00F25892 /* libBTEncryption.a */; };
 		D30B41E714BF4611005292EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D30B41D314BF4611005292EF /* InfoPlist.strings */; };
 		D30B41E814BF4611005292EF /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D30B41D514BF4611005292EF /* MainWindow.xib */; };
 		D30B41EA14BF4611005292EF /* exampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D30B41DA14BF4611005292EF /* exampleAppDelegate.m */; };
@@ -29,7 +30,6 @@
 		D35BC16814D6FA66002FF4F0 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D35BC15C14D6FA66002FF4F0 /* AFURLConnectionOperation.m */; };
 		D35BC16914D6FA66002FF4F0 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D35BC15E14D6FA66002FF4F0 /* AFXMLRequestOperation.m */; };
 		D35BC16A14D6FA66002FF4F0 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D35BC16014D6FA66002FF4F0 /* UIImageView+AFNetworking.m */; };
-		D35BC17714D6FAA2002FF4F0 /* libBraintreeEncryption.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D35BC17214D6FAA2002FF4F0 /* libBraintreeEncryption.a */; };
 		D35BC17A14D6FB29002FF4F0 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D35BC17914D6FB29002FF4F0 /* JSONKit.m */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +41,8 @@
 		75082ACD14A13CBC000087BF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		75082AEE14A13CBD000087BF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		75460CB314A38BE200B02606 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A71BD2C2170DE29E00F25892 /* BTEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTEncryption.h; sourceTree = "<group>"; };
+		A71BD2C7170DE44B00F25892 /* libBTEncryption.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBTEncryption.a; sourceTree = "<group>"; };
 		D30B41D414BF4611005292EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D30B41D614BF4611005292EF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		D30B41D714BF4611005292EF /* example-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "example-Info.plist"; sourceTree = "<group>"; };
@@ -76,8 +78,6 @@
 		D35BC15E14D6FA66002FF4F0 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		D35BC15F14D6FA66002FF4F0 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		D35BC16014D6FA66002FF4F0 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		D35BC17214D6FAA2002FF4F0 /* libBraintreeEncryption.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBraintreeEncryption.a; sourceTree = "<group>"; };
-		D35BC17614D6FAA2002FF4F0 /* BraintreeEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BraintreeEncryption.h; sourceTree = "<group>"; };
 		D35BC17814D6FB29002FF4F0 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		D35BC17914D6FB29002FF4F0 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,7 +91,7 @@
 				75460CB514A38BEB00B02606 /* Security.framework in Frameworks */,
 				75082ACC14A13CBC000087BF /* Foundation.framework in Frameworks */,
 				75082ACE14A13CBC000087BF /* CoreGraphics.framework in Frameworks */,
-				D35BC17714D6FAA2002FF4F0 /* libBraintreeEncryption.a in Frameworks */,
+				A71BD2C8170DE44B00F25892 /* libBTEncryption.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +200,7 @@
 		D35BC17114D6FAA2002FF4F0 /* BraintreeEncryption */ = {
 			isa = PBXGroup;
 			children = (
-				D35BC17214D6FAA2002FF4F0 /* libBraintreeEncryption.a */,
+				A71BD2C7170DE44B00F25892 /* libBTEncryption.a */,
 				D35BC17314D6FAA2002FF4F0 /* usr */,
 			);
 			path = BraintreeEncryption;
@@ -225,7 +225,7 @@
 		D35BC17514D6FAA2002FF4F0 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				D35BC17614D6FAA2002FF4F0 /* BraintreeEncryption.h */,
+				A71BD2C2170DE29E00F25892 /* BTEncryption.h */,
 			);
 			path = include;
 			sourceTree = "<group>";

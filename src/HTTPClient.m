@@ -3,7 +3,7 @@
 
 @implementation HTTPClient
 
-NSString * const BASE_URL = @"https://merchant.app:4567";
+NSString* const BASE_URL = @"https://localhost:8443";
 
 - (id)init {
   NSURL * url = [[[NSURL alloc] initWithString:BASE_URL] autorelease];

@@ -1,12 +1,12 @@
 #import "MainViewController.h"
-#import "BraintreeEncryption.h"
+#import "BTEncryption.h"
 #import "HTTPClient.h"
 #import "JSONKit.h"
 
 
 @implementation MainViewController
 
-NSString * const PUBLIC_KEY = @"your-client-side-encryption-key";
+NSString* const PUBLIC_KEY = @"YOUR_CLIENT_SIDE_ENCRYPTION_KEY";
 
 @synthesize formTable, ccNumberField, ccExpirationField, ccNumberCell, ccExpirationCell, cells;
 
@@ -35,8 +35,8 @@ NSString * const PUBLIC_KEY = @"your-client-side-encryption-key";
 }
 
 -(NSDictionary*) encryptFormData:(NSDictionary*) formData {
-  BraintreeEncryption * braintree = [[[BraintreeEncryption alloc] initWithPublicKey: PUBLIC_KEY] autorelease];
-  NSMutableDictionary * encryptedParams = [[[NSMutableDictionary alloc] init] autorelease];
+  BTEncryption *braintree = [[[BTEncryption alloc] initWithPublicKey: PUBLIC_KEY] autorelease];
+  NSMutableDictionary *encryptedParams = [[[NSMutableDictionary alloc] init] autorelease];
 
   [formData enumerateKeysAndObjectsUsingBlock:^(id key, id object, BOOL * stop) {
     [encryptedParams setObject: [braintree encryptString: object] forKey: key];
@@ -46,7 +46,7 @@ NSString * const PUBLIC_KEY = @"your-client-side-encryption-key";
 }
 
 -(NSDictionary*) getFormData {
-  NSMutableDictionary * formData = [[[NSMutableDictionary alloc] init] autorelease];
+  NSMutableDictionary *formData = [[[NSMutableDictionary alloc] init] autorelease];
   [formData setObject: ccNumberField.text     forKey: @"cc_number"];
   [formData setObject: ccExpirationField.text forKey: @"cc_exp_date"];
   return formData;
