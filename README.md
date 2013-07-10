@@ -1,7 +1,7 @@
 # Braintree iOS Encryption Integration Examples
 
 This project contains examples of integrating with the [Braintree](http://www.braintreepaymentsolutions.com)
-payment gateway using the [Braintree iOS library](https://github.com/braintree/braintree_ios).
+payment gateway using the [Braintree iOS library](https://github.com/braintree/braintree_ios) and [documentation](https://www.braintreepayments.com/docs/ios/encryption/overview).
 
 ## example.xcodeproj
 This is an xcode project that you can open and build with Xcode.
